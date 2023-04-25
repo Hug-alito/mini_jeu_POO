@@ -1,18 +1,21 @@
+# frozen_string_literal: true
+
 require 'bundler'
 Bundler.require
 
 require_relative 'lib/game'
 require_relative 'lib/player'
 
-player1 = Player.new("alice")
-player2 = Player.new("bob")
+player1 = Player.new('alice')
+player2 = Player.new('bob')
 
 def quit
   printf "Merci d'avoir utilisé notre logiciel !"
+  exit
 end
 
 def start(player1, player2)
-  puts "Voici l'état de chaque joueur :" 
+  puts "Voici l'état de chaque joueur :"
   puts "#{player1.name} a #{player1.life_points} points de vie."
   puts "#{player2.name} a #{player2.life_points} points de vie."
   puts "Passons à la phase d'attaque."
